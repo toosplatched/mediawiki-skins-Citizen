@@ -1,9 +1,9 @@
 .articleFeedbackv5-panel {
-	background: oklch(from var( --color-surface-1 ) l c h / 20%); 
-	border-radius: var( --border-radius-medium ); 
-	border: var(--border-base);
-	width: 100%!important;
-	max-width: unset!important;
+	width: 100% !important;
+	max-width: unset !important;
+	border: var( --border-base );
+	border-radius: var( --border-radius-medium );
+	background: oklch( from var( --color-surface-1 ) l c h / 20% );
 	.mixin-citizen-frosted-glass;
 }
 
@@ -12,30 +12,30 @@
 }
 
 .articleFeedbackv5-panel .ui-button {
-	box-shadow: unset !important;
-	border-radius: var( --border-radius-pill ) !important;
-	color: var( --color-base ) !important;
 	padding: var( --space-xs ) var( --space-md ) !important;
+	color: var( --color-base ) !important;
+	border-radius: var( --border-radius-pill ) !important;
+	box-shadow: unset !important;
 	font-weight: normal !important;
 	background-color: transparent;
-	transition-timing-function: var( --transition-timing-function-ease );
 	transition-duration: var( --transition-duration-base );
 	transition-property: transform;
+	transition-timing-function: var( --transition-timing-function-ease );
 
 	&:hover {
 		color: var( --color-inverted-primary ) !important;
 		background-color: var( --color-progressive--hover );
 		border-radius: var( --border-radius-medium ) !important;
-		transform: scale(1.05);
+		transform: scale( 1.05 );
 	}
 }
 
 .articleFeedbackv5-ui .articleFeedbackv5-submit span,
 .articleFeedbackv5-ui .articleFeedbackv5-cta-button span,
 .articleFeedbackv5-panel .ui-button {
-	font-size: var( --font-size-small ) !important;
-	line-height: var( --line-height-small ) !important;
 	height: auto;
+	line-height: var( --line-height-small ) !important;
+	font-size: var( --font-size-small ) !important;
 }
 
 .articleFeedbackv5-ui .articleFeedbackv5-submit,
@@ -66,28 +66,28 @@
 }
 
 .articleFeedbackv5-ui .feedback-text {
-	background-color: transparent;
-	border: var( --border-subtle ) !important;
-	border-radius: var( --border-radius-medium );
-	padding: var( --space-md );
 	width: 100%;
 	height: auto;
-	font-family: var( --font-family-citizen-base )!important;
+	padding: var( --space-md );
+	font-family: var( --font-family-citizen-base ) !important;
+	border: var( --border-subtle ) !important;
+	border-radius: var( --border-radius-medium );
+	background-color: transparent;
 }
 
 .articleFeedbackv5-title {
 	margin-top: 0;
-	margin-bottom: 0
+	margin-bottom: 0;
 }
 
 .articleFeedbackv5-tooltip-trigger {
-	display: none
+	display: none;
 }
 
 .articleFeedbackv5-panel .articleFeedbackv5-title-wrap {
 	display: flex;
+	gap: var( --space-sm );
 	align-items: center;
-	gap: var(--space-sm);
 }
 
 .articleFeedbackv5-clear {
@@ -96,40 +96,35 @@
 
 .articleFeedbackv5-bucket6-toggle .buttons {
 	display: flex;
-	gap: var(--space-sm);
+	gap: var( --space-sm );
 
 	& .form-item {
 		margin: unset;
 
-		&&[data-value="no"] {
+		&&[ data-value='no' ] {
 			.ui-button:hover {
-				background: var(--color-destructive--hover);
+				background: var( --color-destructive--hover );
 			}
 		}
 	}
 }
 
 .articleFeedbackv5-arrow-back {
-	background: var(--color-base);
-	-webkit-mask-image: url(https://tagging.wiki/w/load.php?modules=skins.citizen.icons&image=collapse&format=original&lang=en&skin=citizen&version=85ugn);
-	mask-image: url(https://tagging.wiki/w/load.php?modules=skins.citizen.icons&image=collapse&format=original&lang=en&skin=citizen&version=85ugn);
-	height: var(--font-size-small);
-	width: var(--font-size-small);
-	min-width: var(--size-icon);
-	min-height: var(--size-icon);
 	display: block;
-	padding: unset;
+	width: var( --font-size-small );
+	min-width: var( --size-icon );
+	height: var( --font-size-small );
+	min-height: var( --size-icon );
 	margin-right: unset;
-	transform: rotate(-90deg) translateX(1px);
-}
-
-@supports (-webkit-mask-image:none) or (mask-image:none) {
-	.articleFeedbackv5-arrow-back {
-		-webkit-mask-repeat: no-repeat;
-		mask-repeat: no-repeat;
-		-webkit-mask-position: center;
-		mask-position: center;
-		-webkit-mask-size: contain;
-		mask-size: contain;
-	}
+	padding: unset;
+	background: var( --color-base );
+	-webkit-mask-image: url( 'https://tagging.wiki/w/load.php?modules=skins.citizen.icons&image=collapse&format=original&lang=en&skin=citizen&version=85ugn' );
+	mask-image: url( 'https://tagging.wiki/w/load.php?modules=skins.citizen.icons&image=collapse&format=original&lang=en&skin=citizen&version=85ugn' );
+	-webkit-mask-position: center;
+	mask-position: center;
+	-webkit-mask-repeat: no-repeat;
+	mask-repeat: no-repeat;
+	-webkit-mask-size: contain;
+	mask-size: contain;
+	transform: rotate( -90deg ) translateX( 1px );
 }
