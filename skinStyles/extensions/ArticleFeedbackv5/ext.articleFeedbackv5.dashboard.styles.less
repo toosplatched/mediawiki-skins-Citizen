@@ -1,0 +1,93 @@
+.articleFeedbackv5-feedback .articleFeedbackv5-feature-marker,
+.articleFeedbackv5-feedback .articleFeedbackv5-resolve-marker,
+.articleFeedbackv5-feedback .articleFeedbackv5-noaction-marker,
+.articleFeedbackv5-feedback .articleFeedbackv5-inappropriate-marker,
+.articleFeedbackv5-feedback .articleFeedbackv5-autohide-marker,
+.articleFeedbackv5-feedback .articleFeedbackv5-hide-marker,
+.articleFeedbackv5-feedback .articleFeedbackv5-archive-marker,
+.articleFeedbackv5-feedback .articleFeedbackv5-oversight-marker {
+	color: var( --color-subtle );
+	position: relative;
+
+	&::before {
+		mask-position: center;
+		mask-size: cover;
+		width: var( --font-size-small );
+		height: var( --font-size-small );
+		min-width: var( --size-icon );
+		min-height: var( --size-icon );
+		float: unset;
+		position: absolute;
+		top: 50%;
+		left: 0;
+		transform: translateX(-30px) translateY(-50%);
+	}
+}
+
+.articleFeedbackv5-feedback .articleFeedbackv5-feature-marker:before {
+	mask-image: url(/1.44/extensions/ArticleFeedbackv5/modules/jquery.articleFeedbackv5/images/toolbox_feature.svg?d9ba5);
+	background: currentColor;
+}
+
+#articleFeedbackv5-show-feedback {
+	display: flex;
+	flex-direction: column;
+}
+
+.articleFeedbackv5-sort-label,
+.filter-active, .filter-active:visited,
+#articleFeedbackv5-filter-select,
+#articleFeedbackv5-sort-select,
+.filter-active #articleFeedbackv5-filter-select,
+.filter-active #articleFeedbackv5-sort-select {
+	color: var( --color-base );
+	font-family: var( --font-family-citizen-base );
+}
+
+#articleFeedbackv5-showing-count-wrap,
+#articleFeedbackv5-special-watchlist-showing-wrap {
+	color: var( --color-subtle );
+}
+
+.articleFeedbackv5-comment-wrap h3 {
+	color: var( --color-subtle );
+	font-size: var( --font-size-large ) !important;
+
+	a {
+		font-size: inherit !important;
+	}
+}
+
+.articleFeedbackv5-feedback {
+	background-image: unset;
+	border: unset;
+	margin: var( --space-xl ) 0;
+	display: flex;
+	flex-direction: row-reverse;
+	padding: 0 var( --space-md );
+
+	.articleFeedbackv5-feedback-tools {
+		background: var( --color-surface-2 );
+		border-radius: var( --border-radius-medium );
+		padding: var( --space-md );
+		float: unset;
+
+		p {
+			margin-top: unset;
+		}
+	}
+}
+
+.articleFeedbackv5-feedback-tools a.articleFeedbackv5-note-link {
+	background: var( --color-surface-4 );
+	border: var( --border-subtle );
+	padding: var( --space-xs );
+}
+
+#articleFeedbackv5-sort-filter-controls {
+	position: sticky;
+	top: calc( var( --height-sticky-header ) * 2 );
+	z-index: 5;
+	padding-top: var( --space-md );
+	.mixin-citizen-frosted-glass;
+}
